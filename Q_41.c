@@ -14,20 +14,3 @@ Output 2:
 
 */
 
-#include <stdio.h>
-
-int main()
-{
-    int number;
-    int r = 0;
-
-    printf("Enter the number: ");
-    scanf("%d", &number);
-
-    do
-    {
-        
-    }
-
-    while (number>=0);
-}
