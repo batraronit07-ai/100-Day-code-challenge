@@ -14,21 +14,25 @@ Output 2:
 
 */
 
-#include<stdio.h>
 
-int main() {
 
-    int  n, rem;
-    long long binary=0, place=1;
+#include <stdio.h>
+
+    int main()
+{
+
+    int n, remainder;
+    long long binary = 0, place = 1;
 
     printf("Enter a number: ");
     scanf("%d", &n);
+    int num;
 
-    for (;n>0;n=n/2)
+    for (; n > 0; n = n / 2)
     {
-        rem = n%2;
-        binary = binary  + rem*place;
-        place=place*10;
+        remainder = n % 2;
+        binary = binary + remainder * place;
+        place = place * 10;
     }
 
     printf("%lld\n", binary);
