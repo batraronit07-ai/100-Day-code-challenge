@@ -20,3 +20,63 @@ True
 
 */
 
+#include <stdio.h>
+
+int main()
+{
+
+    int i, j, rows, columns;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    printf("Enter the number of columns: ");
+    scanf("%d", &columns);
+
+    int arr[rows][columns];
+
+    printf("Enter the values of the matrix: ");
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            if (arr[i][i] == arr[j][j])
+            {
+                printf("Diagonal elements are distinct.\n");
+                break;
+            }
+        }
+
+        if (arr[i][i] == arr[j][j])
+        {
+            break;
+            ;
+        }
+
+        for (int j = 0; j < columns; j++)
+        {
+            if (arr[i][i] != arr[j][j])
+            {
+                printf("Diagonal elements are NOT distinct.\n");
+                break;
+            }
+        }
+
+        if (arr[i][i] != arr[j][j])
+        {
+            break;
+
+        }
+    }
+
+    return 0;
+}
+
